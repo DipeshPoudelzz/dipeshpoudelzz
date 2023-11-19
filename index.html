@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/10b2fd9b1a.js" crossorigin="anonymous"></script>    
+    <title>SponsorPage</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SponsorPage</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <div class="banner">
+        <p class="animate-slide">Yeti Cloud's secure web hosting is web hosting provided by a web hosting service that emphasizes important security features you might need as you grow your business. Secure web hosting services are not a guarantee with every hosting provider.</p>
+        <h1 class="animate-slide">Explore our wide range of options for hosting</h1>
+        <button class="view-cars animate-fade">View More</button>
+    </div>
+
+    <section class="about-us">
+        <div class="about-left">
+            <video width="500"  controls>
+                <source src="images/video.mp4" type="video/mp4">
+              </video>
+              <p><a href="https://yetiapp.cloud/">Yeti Hosting</a></p>
+        </div>
+        <div class="about-right">
+            <img id="animatedImg" src="images/about-img.png" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 SponsorPage</p>
+    </footer>
+    <script>
+        const img = document.getElementById('animatedImg');
+        let width = 200; // Initial width
+        let height = 150; // Initial height
+        const targetWidth = 300; // Target width (increase by 50px)
+        const targetHeight = 400; // Target height (increase by 50px)
+        const increment = 2; // Increment value for width and height
+    
+        function increaseSize() {
+          if (width < targetWidth || height < targetHeight) {
+            width += increment;
+            height += increment;
+            img.style.width = width + 'px';
+            img.style.height = height + 'px';
+            requestAnimationFrame(increaseSize);
+          }
+        }
+    
+        // Start the animation
+        increaseSize();
+    
+    
+      </script>
+</body>
+
+    
+</html>
+    
